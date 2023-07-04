@@ -1,0 +1,66 @@
+{
+  "item": [
+    {
+      "type": "string",
+      "linkId": "2167020258730",
+      "text": "Deceased Name",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "choice",
+      "linkId": "8076188224055",
+      "text": "Gender",
+      "required": false,
+      "repeats": false,
+      "readOnly": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Male"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Female"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "linkId": "5678701541156",
+      "text": "County of death",
+      "repeats": false
+    },
+    {
+      "type": "string",
+      "linkId": "6168245924718",
+      "text": "Facility of Death"
+    },
+    {
+      "type": "date",
+      "linkId": "9587656081569",
+      "text": "Date of Death"
+    },
+    {
+      "type": "date",
+      "linkId": "1219215954008",
+      "text": "Date of birth"
+    },
+    {
+      "type": "string",
+      "linkId": "5195843956750",
+      "text": "New item 6"
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "title": "Administrative data",
+  "status": "active"
+}
