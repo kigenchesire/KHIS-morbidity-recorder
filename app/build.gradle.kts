@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -47,6 +48,9 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.2")
     implementation("androidx.work:work-runtime-ktx:2.7.1")
     implementation ("ca.uhn.hapi.fhir:hapi-fhir-client:5.4.0")
+    implementation("com.google.firebase:firebase-auth:21.1.0")
+    implementation("androidx.core:core-splashscreen:1.0.0")
+    implementation("com.google.firebase:firebase-database:20.1.0")
 
     testImplementation("junit:junit:4.+")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
