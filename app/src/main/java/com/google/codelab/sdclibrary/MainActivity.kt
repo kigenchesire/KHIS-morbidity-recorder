@@ -55,8 +55,6 @@ class MainActivity : AppCompatActivity() {
     // 4.2 Replace with code from the codelab to add a questionnaire fragment.
     // Step 2: Configure a QuestionnaireFragment
     questionnaireJsonString = getStringFromAssets("records-final.R4.json")
-
-
     if (savedInstanceState == null) {
       supportFragmentManager.commit {
         setReorderingAllowed(true)
@@ -123,17 +121,6 @@ class MainActivity : AppCompatActivity() {
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
   override fun onCreateOptionsMenu(menu: Menu): Boolean {
     menuInflater.inflate(R.menu.submit_menu, menu)
     return super.onCreateOptionsMenu(menu)
@@ -151,6 +138,8 @@ class MainActivity : AppCompatActivity() {
     return assets.open(fileName).bufferedReader().use { it.readText() }
   }
   private fun generateUuid(): String {
+
     return UUID.randomUUID().toString()
+
 }}
 
