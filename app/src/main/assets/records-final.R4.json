@@ -1,0 +1,514 @@
+{
+  "item": [
+    {
+      "type": "string",
+      "linkId": "2226805764982",
+      "text": "Deceased Name",
+      "required": true
+    },
+    {
+      "type": "choice",
+      "linkId": "5632567937100",
+      "text": "Gender",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Male"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Female"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Male"
+          }
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "linkId": "3798832227200",
+      "text": "ID no/ Birth Cert no",
+      "required": true
+    },
+    {
+      "type": "choice",
+      "linkId": "9239087932810",
+      "text": "County of Death",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Nakuru"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Nairobi"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Kisumu"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Siaya"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Mombasa"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Uasin Gishu"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "linkId": "3174230543335",
+      "text": "Facility of Death",
+      "required": false
+    },
+    {
+      "type": "date",
+      "linkId": "6126469047666",
+      "text": "Death of Birth",
+      "required": false
+    },
+    {
+      "type": "date",
+      "linkId": "244984970741",
+      "text": "Date of Death",
+      "required": true
+    },
+    {
+      "type": "text",
+      "linkId": "7673531877214",
+      "text": "Condition leading to death"
+    },
+    {
+      "type": "text",
+      "linkId": "4938249332443",
+      "text": "Chain of events leading to death"
+    },
+    {
+      "type": "string",
+      "linkId": "6433499124496",
+      "text": "Underlying cause of death"
+    },
+    {
+      "type": "string",
+      "linkId": "4880411738355",
+      "text": "Time interval"
+    },
+    {
+      "type": "choice",
+      "linkId": "5937059901424",
+      "text": "Was surgery in the last for weeks",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "linkId": "8980869450764",
+      "text": "Was autopsy requested",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "linkId": "3571603007572",
+      "text": "If surgery was perfomed specify reason"
+    },
+    {
+      "type": "choice",
+      "linkId": "7321511970072",
+      "text": "If yes were the findings used for certification",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "open-choice",
+      "linkId": "4241777452481",
+      "text": "Manner of death",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "At home"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Farm"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Accident"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Legal intervention"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "War"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Could not be determined"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Pending Investigation"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "linkId": "5891590468919",
+      "text": "Fetal death: Was it multiple pregnancy",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "linkId": "1405145306897",
+      "text": "Pregnant at time of death",
+      "enableWhen": [
+        {
+          "question": "5632567937100",
+          "operator": "=",
+          "answerCoding": {
+            "display": "Female"
+          }
+        }
+      ],
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "linkId": "690771113460",
+      "text": "Pregnant between 42 days before death",
+      "enableWhen": [
+        {
+          "question": "5632567937100",
+          "operator": "=",
+          "answerCoding": {
+            "display": "Female"
+          }
+        }
+      ],
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "linkId": "2507424530242",
+      "text": "Pregnant between 43 days and 1 year before death",
+      "enableWhen": [
+        {
+          "question": "5632567937100",
+          "operator": "=",
+          "answerCoding": {
+            "display": "Female"
+          }
+        }
+      ],
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "linkId": "584744877162",
+      "text": "Did the pregnancy contribute to death?",
+      "enableWhen": [
+        {
+          "question": "5632567937100",
+          "operator": "=",
+          "answerCoding": {
+            "display": "Female"
+          }
+        }
+      ],
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Uknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "linkId": "4391092549239",
+      "text": "Still born",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "No"
+          }
+        },
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ],
+      "initial": [
+        {
+          "valueCoding": {
+            "display": "Unknown"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "linkId": "5593810652709",
+      "text": "Birth weight in grams"
+    },
+    {
+      "type": "integer",
+      "linkId": "6038151668752",
+      "text": "If death under 24 hours specify the time lived"
+    },
+    {
+      "type": "text",
+      "linkId": "447213075379",
+      "text": "If perinatal death state the conditions of the mother which affected the fetus"
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "id": "5770416",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2023-07-03T15:41:15.752-04:00"
+  },
+  "title": "records-final",
+  "status": "draft"
+}

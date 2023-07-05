@@ -24,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewModelScope
 import ca.uhn.fhir.context.FhirContext
 import ca.uhn.fhir.context.FhirVersionEnum
 import com.google.android.fhir.FhirEngine
@@ -40,6 +41,7 @@ import org.hl7.fhir.r4.model.QuestionnaireResponse
 import java.util.UUID
 
 
+
 class MainActivity : AppCompatActivity() {
 
   var questionnaireJsonString: String? = null
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     // 4.2 Replace with code from the codelab to add a questionnaire fragment.
     // Step 2: Configure a QuestionnaireFragment
-    questionnaireJsonString = getStringFromAssets("records-final.R4.json")
+    questionnaireJsonString = getStringFromAssets("new-patient-registration-paginated.json")
     if (savedInstanceState == null) {
       supportFragmentManager.commit {
         setReorderingAllowed(true)
@@ -66,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     }
   }
 
-  private fun submitQuestionnaire() {
+   fun submitQuestionnaire() {
     val isPatientSaved = MutableLiveData<Boolean>()
 
     // 5 Replace with code from the codelab to get a questionnaire response.
@@ -90,7 +92,8 @@ class MainActivity : AppCompatActivity() {
       //  upload qusetonnaire to FHIR engine
 
      ////// new code
-      var fhirEngine: FhirEngine = FhirEngineProvider.getInstance(this@MainActivity)
+      //var fhirEngine: FhirEngine = FhirEngineProvider.getInstance(this@MainActivity)
+      val fhirEngine: FhirEngine by lazy { FhirEngineProvider.getInstance(this@MainActivity) }
       if (QuestionnaireResponseValidator.validateQuestionnaireResponse(
           questionnaireResource,
           questionnaireResponse,
@@ -104,22 +107,30 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this@MainActivity, "failed to submit", Toast.LENGTH_SHORT).show()
         return@launch
       }
-      val entry = ResourceMapper.extract(questionnaireResource, questionnaireResponse)
+      val entry = ResourceMapper.extract(questionnaireResource, questionnaireResponse).entryFirstRep
 
-//      if (entry.type !is QuestionnaireResponse) {
-//        val resourse_entry = entry.resource
-//        Toast.makeText(this@MainActivity, "resource type = $resourse_entry", Toast.LENGTH_SHORT).show()
-//        return@launch
-//      }
-      //val questionnaireresponse  = entry.resource as QuestionnaireResponse
-      //questionnaireresponse.id = generateUuid()
-      fhirEngine.create(entry)
+      if (entry.resource !is Patient) {
+        val resourse_entry = entry.resource
+        Toast.makeText(this@MainActivity, "resource type = $resourse_entry", Toast.LENGTH_SHORT).show()
+        return@launch
+      }
+      val questionnaireresponse  = entry.resource as Patient
+      questionnaireresponse.id = generateUuid()
+      fhirEngine.create(questionnaireresponse)
       isPatientSaved.value = true
       Toast.makeText(this@MainActivity, "data submitted suuccessfully", Toast.LENGTH_SHORT).show()
+      fun submitPatientDataToServer(patientData: Patient): Boolean {
+        isPatientSaved.value = true
+        return true
+      }
+
 
 
     }
+
+
   }
+
 
   override fun onCreateOptionsMenu(menu: Menu): Boolean {
     menuInflater.inflate(R.menu.submit_menu, menu)
