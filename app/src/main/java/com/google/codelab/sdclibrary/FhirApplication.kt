@@ -28,7 +28,7 @@ import com.google.android.fhir.ServerConfiguration
 import com.google.android.fhir.sync.remote.HttpLogger
 
 class FhirApplication : Application() {
-    private val fhirEngine: FhirEngine by lazy { FhirEngineProvider.getInstance(this) }
+    val fhirEngine: FhirEngine by lazy { FhirEngineProvider.getInstance(this) }
 
     override fun onCreate() {
         super.onCreate()
@@ -38,7 +38,7 @@ class FhirApplication : Application() {
                 enableEncryptionIfSupported = true,
                 RECREATE_AT_OPEN,
                 ServerConfiguration(
-                    baseUrl = "http://hapi.fhir.org/baseR4/,",
+                    baseUrl = " http://10.0.2.2:8080/fhir",
                     httpLogger =
                     HttpLogger(
                         HttpLogger.Configuration(
