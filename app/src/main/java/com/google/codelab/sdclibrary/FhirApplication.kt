@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.android.fhir.codelabs.engine
+package com.google.codelab.sdclibrary
 
 import android.app.Application
 import android.content.Context
